@@ -37,6 +37,30 @@ Após o ambiente com a box estiver disponível, podemos usar o comando `vagrant 
 
 Com isso podemos usar o `vault` :smile:
 
+## Executando o vault via UI (WEB) 🤯
+
+Podemos acessar o vault de algumas formas usando a sua `cli`, `API` ou `ui (web)`
+
+| em modo dev podemos utilizar a interface web sem precisar configurar.
+
+```
+vault server -dev -dev-listen-address='IP_SERVER:8200'
+```
+
+| OBS: Por padrão a porta que o vault utilizar é a `8200`
+
+
+![screen](./screenshot/screen4.png)
+
+Agora precisamos **exportar** a variável de ambiente **VAULT_ADDR** pois como estamos em ambiente de desenvolvimento queremos acessar como http e não como https.
+
+| export VAULT_ADDR='http:IP_SERVER:8200'
+
+agora basta acessar a página web usando o ip do servidor copiando o **Root Token** que é disponibilizado pelo vault.
+
+![screen](./screenshot/screen5.png)
+![screen](./screenshot/screen6.png)
+
 ## Documentação 📄
 
 **Vault**:

@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     machine.vm.box = "centos/7"
     machine.vm.hostname = "dev"
 
-    machine.vm.network "private_network", type: "dhcp"
+    machine.vm.network "public_network", bridge: "eth1", ip: "192.168.1.94"
 
     # alterar para qual o script de acordo com a box desejada
     
