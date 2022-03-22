@@ -54,8 +54,9 @@ vault server -dev -dev-listen-address='IP_SERVER:8200'
 
 Agora precisamos **exportar** a variável de ambiente **VAULT_ADDR** pois como estamos em ambiente de desenvolvimento queremos acessar como http e não como https.
 
-| export VAULT_ADDR='http:IP_SERVER:8200'
-
+```
+export VAULT_ADDR='http://IP_SERVER:8200'
+```
 agora basta acessar a página web usando o ip do servidor copiando o **Root Token** que é disponibilizado pelo vault.
 
 ![screen](./screenshot/screen5.png)
